@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NedoAvitoAPIGateWay.Controllers
+namespace NedoAvito.APIGateWay.Controllers
 {
     [ApiController]
     [Route("[controller]")]

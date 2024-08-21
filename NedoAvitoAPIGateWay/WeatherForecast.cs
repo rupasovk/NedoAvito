@@ -1,6 +1,6 @@
 using System;
 
-namespace NedoAvitoAPIGateWay
+namespace NedoAvito.APIGateWay
 {
     public class WeatherForecast
     {

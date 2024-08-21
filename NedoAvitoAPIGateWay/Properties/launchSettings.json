@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "NedoAvitoAPIGateWay": {
+    "NedoAvito.APIGateWay": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

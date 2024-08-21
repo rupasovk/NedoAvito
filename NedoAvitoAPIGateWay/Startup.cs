@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NedoAvitoAPIGateWay
+namespace NedoAvito.APIGateWay
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace NedoAvitoAPIGateWay
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NedoAvitoAPIGateWay", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NedoAvito.APIGateWay", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace NedoAvitoAPIGateWay
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NedoAvitoAPIGateWay v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NedoAvito.APIGateWay v1"));
             }
 
             app.UseHttpsRedirection();

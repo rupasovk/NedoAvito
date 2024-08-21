@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["NedoAvitoAPIGateWay/NedoAvitoAPIGateWay.csproj", "NedoAvitoAPIGateWay/"]
-RUN dotnet restore "NedoAvitoAPIGateWay/NedoAvitoAPIGateWay.csproj"
+COPY ["NedoAvito.APIGateWay/NedoAvito.APIGateWay.csproj", "NedoAvito.APIGateWay/"]
+RUN dotnet restore "NedoAvito.APIGateWay/NedoAvito.APIGateWay.csproj"
 COPY . .
-WORKDIR "/src/NedoAvitoAPIGateWay"
-RUN dotnet build "NedoAvitoAPIGateWay.csproj" -c Release -o /app/build
+WORKDIR "/src/NedoAvito.APIGateWay"
+RUN dotnet build "NedoAvito.APIGateWay.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "NedoAvitoAPIGateWay.csproj" -c Release -o /app/publish
+RUN dotnet publish "NedoAvito.APIGateWay.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "NedoAvitoAPIGateWay.dll"]
+ENTRYPOINT ["dotnet", "NedoAvito.APIGateWay.dll"]
